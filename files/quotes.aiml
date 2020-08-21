@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	    <topic name="quotes">
+        <category>
+            <pattern>ok</pattern>
+            <template>
+                <random>
+                    <li>Không có hoàn cảnh nào tuyệt vọng, chỉ có người tuyệt vọng vì hoàn cảnh.</li>
+                    <li>Hãy sống là chính mình, bình thường nhưng không tầm thường.</li>
+                    <li>Nơi lạnh nhất không phải là Bắc cực mà là nơi không có tình người.</li>
+                    <li>Kẻ nhu nhược chỉ biết than vãn, người mạnh mẽ không ngừng cố gắng. Càng cố gắng, càng may mắn.</li>
+                    <li>Cố gắng và hối hận, cái nào đau đớn hơn?</li>
+                    <li>Tôi buồn vì không có giầy để đi, cho đến khi tôi gặp người thiếu cả đôi chân.</li>
+                    <li>Thật ra ai thực lòng yêu bạn, bạn có thể tự mình cảm nhận được. Đừng tự lừa dối mình, đừng chờ đợi một kì tích không bao giờ đến, tình cảm không thể cưỡng cầu, người không bước vào trái tim bạn được, hãy để anh ta ra đi, thế giới mà bạn không bước vào được, cũng nên từ bỏ.</li>
+                    <li>Cuộc đời vốn dĩ không hề trải màu hồng, hãy cứ dũng cảm nhận lấy những gì đời ném vào bạn. Bạn có thể mạnh mẽ và gai góc hơn, nhưng bạn cũng có thể sẽ mềm yếu và gục ngã ngay lập tức. Và bạn thuộc nhóm nào là do bạn quyết định. Hãy nhớ sự lựa chọn nằm ở bạn.</li>
+                    <li> Ai nên khôn mà chẳng từng dại, làm người muốn học đi thì trước tiên phải học ngã, muốn ngẩng đầu thì phải biết cúi đầu. Cúi đầu càng thấp thì ngẩng đầu càng cao, cúi đầu hôm nay để ngẩng đầu ngày mai.</li>
+                    <li>Thành công chính là số lần có thể đứng được vững nhiều hơn số lần vấp ngã.</li>
+                    <li>Nếu bạn bị vấp ngã, điều đó chưa chắc là bạn đang đi sai đường.</li>
+                    <li>Đừng phàn nàn về công việc, về cuộc sống. Chẳng ai quan tâm đâu, thay vào đó, hãy cố gắng hoàn thành tốt công việc và chủ động khiến cuộc sống của mình trở nên tốt hơn. Nếu bạn không hài lòng với cuộc sống hiện tại, đơn giản thôi…hãy thay đổi nó.</li>
+                    <li>Thà hối hận trước những việc sai trái đã làm còn hơn là không biết hối hận.ường.</li>
+                    <li>Nếu có ước mơ, hãy cố gắng theo đuổi. Đừng để một ai khiến bạn chùn bước. Bởi lẽ, nỗ lực của bạn không phải để chứng minh là người giỏi nhất mà là bạn đang cố gắng vượt qua giới hạn của mình để nhìn thấy những điều tốt đẹp hơn.</li>
+                    <li>Mặt đất luôn cứng hơn sau mỗi trận mưa. Sau mỗi lần khó khăn, vấp ngã bạn sẽ vững vàng hơn.</li>
+                
+                </random>
+            </template>
+        </category>
+        <category>
+            <pattern>Hay lắm</pattern>
+            <template>Cố gắng lên nào  <bot name="name" /> tin <get name = "yourname"> </get> làm được😄</template>
+        </category>
+    </topic>
+</aiml>

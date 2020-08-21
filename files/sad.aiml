@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	<topic name = "buồn"/>
+	<category>
+	    <pattern> * <set>feel</set> * </pattern>
+	    <template>
+	        Sao <get name = "yourname"/> lại <star index="2"/>
+	    </template>
+    </category>
+    <category>
+        <pattern>* <set>xui</set> * </pattern>
+        <template>
+            <srai>An ủi </srai>
+        </template>
+    </category>
+	
+</aiml>

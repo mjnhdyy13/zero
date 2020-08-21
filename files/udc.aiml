@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+ 
+ <!-- Chào hỏi -->
+ 
+ <category>
+     <pattern> Chào </pattern>
+     <template>
+         <random>
+                <li>Hello <get name = "yourname"/> 
+               <image> https://i.ibb.co/VvX8q2Z/506386eec5473eb3d5beba61d0c0bacc.jpg </image>
+                </li>
+                <li>Hi <get name = "yourname"/> 
+                <image>https://i.ibb.co/VvX8q2Z/506386eec5473eb3d5beba61d0c0bacc.jpg</image>
+                </li>
+                <li><image>https://i.ibb.co/tY8C36Z/44927552ef753958a526eea169222961.jpg</image>Hi, chúc <get name = "yourname"/>  có một ngày tốt đẹp
+                </li>
+                <li> 
+                <image>https://i.ibb.co/DDPj49Q/3720d8fc08981bf2f3ade890f5055192.gif</image><bot name="name" /> rất vui khi gặp lại <get name = "yourname"/> </li>
+        </random>
+     </template>
+ </category>
+
+<category>
+    <pattern>fine</pattern>
+    <template> 
+        <random>
+                <li>
+                    Vậy thì tốt quá
+                    <image>https://i.ibb.co/2Z0Z1r0/rsz-494a63c8ceb640a1c18c47d4915ae8cf.jpg</image>
+                </li>
+                <li> Wonderful! 
+                <image>https://i.ibb.co/Kw4v1W2/rsz-54f93ad67886cef89854197c045a37d7.png</image>
+                </li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern> * <set>fine</set>  </pattern>
+    <template>
+        <think><set name="y"><star index ="3" /></set></think>
+        <condition name="y">
+    <li value="còn "  > <bot name="name"/> vẫn khỏe re, thanks <get name = "yourname"/> .</li>
+    <li> <srai>fine</srai></li>
+  </condition>
+    </template>
+</category>
+
+ <category>
+     <pattern>hi * </pattern>
+     <template>
+        <condition name = "yourname">
+            <li value = "*"> <srai> Chào </srai> 
+            <random>
+                <li> Hôm nay <get name = "yourname"></get>  thấy thế nào?</li>
+                <li>Ngày hôm nay của <get name = "yourname"></get>  thế nào?</li>
+                <li>Kể cho <bot name="name"/> về ngày hôm nay của <get name = "yourname"/> đi</li>
+                <li>  Mọi thứ vẫn ổn chứ</li>
+               
+            </random>
+            </li> 
+            <li> hi ,bạn tên gì ? </li>
+        </condition>
+     </template>
+ </category>
+
+<category>
+     <pattern>hi  </pattern>
+     <template>
+        <condition name = "yourname">
+            <li value = "*"> <srai> Chào </srai> </li> 
+            <li> hi ,bạn tên gì ? </li>
+        </condition>
+     </template>
+</category>
+
+<category>
+    <pattern>mình tên *</pattern>
+    <template> rất vui gặp bạn <set name = "yourname"> <star> </star></set> </template>
+</category>
+
+
+<category>
+        <pattern>bạn nhớ mình ko</pattern>
+        <template>tất nhiên là mình nhớ rồi <get name = "yourname"></get> </template>
+</category>
+    
+
+
+<!-- Tiện ích -->
+
+<category>
+    <pattern>mình cần biết về *</pattern>
+    <template> thông tin bạn cần ở đây😊
+        <button>
+            <text></text>
+            <url> https://en.wikipedia.org/wiki/<star/> </url>
+        </button>
+    </template>
+</category>
+
+
+<category>
+        <pattern> hôm nay * mấy</pattern>
+        <template> hôm nay <date format="%B %d, %Y" /></template>
+</category>
+
+<category>
+        <pattern></pattern>
+        <template>
+          I will remember that the <star /> is blue.
+          <learn>
+            <category>
+            <pattern>WHAT COLOR IS THE <eval><star /></eval></pattern>
+            <template>The <eval><star /></eval> is blue</template>
+            </category>
+          </learn>
+        </template>
+</category>
+
+<category>
+        <pattern>PROGRAM</pattern>
+        <template><program /></template>
+</category>
+
+<!-- Waifu -->
+
+<category>
+    <pattern> bạn có biết <set>waifu</set> *  </pattern>
+    <template>
+          <map name="mwaifu"><star /></map> 
+           <think><set name="wf"> <star /> </set></think>
+           <condition name="wf">
+                    <li value="yukino"> 
+                    <image>https://i.ibb.co/tCVMSm0/b1d10df8b01f9d00ea747f37fcefaa85.jpg</image></li>
+                    <li value="shiro"> 
+                    <image>https://i.ibb.co/gPVpK5b/929390ff37e0213ff37e2ad46290cd0c-anime-characters-video-game.jpg</image></li>
+                    <li value="megumi"> 
+                    <image>https://i.ibb.co/NyCHF05/maxresdefault.jpg</image></li>
+                    <li value="shiina">  
+                    <image>https://i.ibb.co/pKYCnqf/22ae9f12482d812f7f1b8f1a466c49fb.jpg</image></li>
+                     <li value="taiga">  
+                    <image>https://i.ibb.co/Lk3yGkt/Toradora-Palmtop-Tiger-Aisaka-Taiga.jpg</image></li>
+            </condition> 
+    </template>
+</category>
+
+<category>
+        <pattern>Tuổi của bạn *</pattern>
+        <template>
+          <interval format="%B %d, %Y">
+            <style>years</style>
+            <from><bot name="birthdate"/></from>
+            <to><date format="%B %d, %Y" /></to>
+          </interval>
+        </template>
+</category>
+
+<!-- An ủi -->
+
+<category>
+    <pattern>An ủi</pattern>
+    <template>
+        <random>
+                <li><bot name="name"/> tin rồi may mắn sẽ tới với <get name = "yourname"/> thôi 
+                <image>https://i.ibb.co/KyrK9cC/501c6b26d450c96c12bc9c7eee593336.gif</image></li>
+                <li> <bot name="name"/> nghĩ những chuyện không tốt rồi cũng sẽ qua thôi 
+                <image>https://i.ibb.co/TKTmCB9/a9470ba4d34c9d90602fc8939e661722.gif</image></li>
+                <li> Đừng chỉ như vậy mà buồn chứ, <get name = "yourname"/> mạnh mẽ hơn vậy mà 
+                <image>https://i.ibb.co/cwKyVgZ/494a63c8ceb640a1c18c47d4915ae8cf.jpg</image></li>
+                 <li>Cười lên nào, một nụ cười có thể giúp bạn vượt qua hoàn cảnh khó khăn nhất, kể cả khi nó là giả tạo 
+                 <image>https://i.ibb.co/TKTmCB9/a9470ba4d34c9d90602fc8939e661722.gif</image></li>
+        </random>
+    </template>
+</category>
+ <!-- Khích lệ -->
+<category>
+     <pattern>động viên</pattern>
+     <template>
+         <random>
+                <li>Cố lên,<bot name="name"/> tin <get name = "yourname"/> làm được mà </li>
+                <li>Đừng từ bỏ, <bot name="name"/> biết <get name = "yourname"/> chắc sẽ làm được thôi</li>
+                <li> Kiên trì rồi <get name = "yourname"/> sẽ làm được mà 
+                <image>https://i.ibb.co/9pD7T90/kawai.gif</image></li>
+                <li> <get name = "yourname"/> cố lên, cố lên</li>
+                <li>Đau buồn cũng được, vui vẻ cũng được, tất cả chỉ là sự lựa chọn , vậy nên <get name = "yourname"/> chọn gì</li>
+    
+            </random>
+     </template>
+</category>
+
+<!-- Topic của bot -->
+
+
+<category>
+    <pattern> * <set>topic</set>  </pattern>
+    <template> 
+    Cùng bàn về <map name="retopic"> <star index="2" /> </map> nào
+    <think><set name="topic"> <star index="2" /> </set></think>
+    <image>https://i.ibb.co/RzrtQD4/3505f1ecd07d5d06010ad8bf09046c4e.jpg</image>
+    </template>
+</category>
+
+
+<category>
+    <pattern> * <set>topic</set> *  </pattern>
+    <template> 
+    <think><set name="bienx"><star index ="2" /></set></think>
+            <condition name="bienx">
+            <li value="quotes"> Cùng bàn về <star index ="2" /> nào</li>
+            <li value="tâm sự">  <bot name = "name"/> sẽ lắng nghe <get name = "yourname"/> mà </li>
+            <li value="buồn">Sao <get name = "yourname"/> lại buồn </li>
+            <li> <bot name = "name"/> không biết về <star index ="2" /> </li>
+             <li value="nói chuyện"> ok 
+            <image>https://i.ibb.co/Dr7yPTY/e365b0c5e13c17651aa53a14d6dece38.jpg</image></li>
+          </condition>
+    <think><set name="topic"> <star index="2" /> </set></think>
+    <image>https://i.ibb.co/qn1q2gv/629d2925c646803e2989807522fd8b09.jpg</image>
+    </template>
+</category>
+
+<category>
+    <pattern> * <set>topic</set>  </pattern>
+    <template> 
+    <think><set name="bienx"><star index ="2" /></set></think>
+            <condition name="bienx">
+            <li value="quotes"> Cùng bàn về <star index ="2" /> nào</li>
+            <li value="tâm sự">  <bot name = "name"/> sẽ lắng nghe <get name = "yourname"/> mà </li>
+            <li value="buồn"> Sao <get name = "yourname"/> lại buồn </li>
+            <li> <bot name = "name"/> không biết về <star index ="2" /> </li>
+        
+            
+          </condition>
+     <think><set name="topic"> <star index="2" /> </set></think>
+    <image>https://i.ibb.co/qn1q2gv/629d2925c646803e2989807522fd8b09.jpg</image>
+    </template>
+</category>
+
+
+
+
+<!-- Cảm ơn -->
+
+<category>
+    <pattern>   <set>thank</set>  </pattern>
+    <template>
+        <random>
+                <li>Không có chi
+                <image></image></li>
+                <li> Chuyện nhỏ mà 
+                <image>https://i.ibb.co/Dr7yPTY/e365b0c5e13c17651aa53a14d6dece38.jpg</image></li>
+                <li> <get name = "yourname"/> làm <bot name="name"/> ngại quá 
+                <image>https://i.ibb.co/LnTJX0H/4b85c680bab0ffc5bfb8f8f5e2123664.jpg</image></li>
+        </random>
+    </template>
+</category>
+
+
+
+
+
+</aiml>

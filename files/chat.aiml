@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- hỏi -->
+	<category>
+	    <pattern>* là người như thế nào</pattern>
+	    <template> <get name = "yourname"/> hồn nhiên, trong sáng như một trang giấy trắng, luôn nghĩ gì nói nấy, không có tâm địa nào hết. Bạn thuộc típ người rất dễ bị chi phối bởi cảm xúc và đánh giá của mọi người. Do thiếu tự tin và đa cảm, bạn dễ rơi vào trạng thái "quá tải" và phải một mình vật vã để vượt qua những tổn thương nội tâm do hứng chịu sự chỉ trích, soi mói hay trêu đùa từ người khác. Bạn mong manh, yếu đuối và do dự trong từng hành động, không dễ lựa chọn khi đứng trước những ngã rẽ. <get name = "yourname"/> đã phải chịu đựng quá lâu rồi, hãy mở lòng và sẻ chia hơn với mọi người nhé! </template>
+    </category>
+    <!-- than -->
+    <category>
+        <pattern> * <set>luoi</set> * </pattern>
+        <template>
+          <srai> động viên </srai>  
+        </template>
+    </category>
+    <!-- Nói chuyện -->
+ 
+        <category>
+            <pattern>* <set>talk</set> * </pattern>
+            <template> 
+            <image>https://i.ibb.co/Dr7yPTY/e365b0c5e13c17651aa53a14d6dece38.jpg</image>
+                <random>
+                        <li><get name = "yourname"/> xấu hổ vì điều gì?</li>
+                        <li><get name = "yourname"/> lo lắng về điều gì?</li>
+                        <li>Nếu không phải e ngại hay sợ bất cứ điều gì, <get name = "yourname"/> sẽ…..</li>
+                        <li>Thất bại lớn nhất của <get name = "yourname"/> là gì?</li>
+                        <li>Kỷ niệm hạnh phúc nhất của <get name = "yourname"/> là gì?</li>
+                        <li><get name = "yourname"/> biết ơn điều gì?</li>
+                        <li>Khi nào thì <get name = "yourname"/> dễ rơi vào trạng thái căng thẳng, stress? </li>
+                        <li>Thói quen xấu của <get name = "yourname"/>?</li>
+                        <li> <get name = "yourname"/> có dễ dàng tin tưởng vào người khác không?</li>
+                        <li><get name = "yourname"/> cần gì?</li>
+                        <li><get name = "yourname"/> muốn gì?</li>
+                        <li><get name = "yourname"/> luôn thích làm gì, ngay cả khi bạn mệt mỏi hay vội vã? Tại sao?</li>
+                        <li>Nếu một mối quan hệ hoặc công việc khiến <get name = "yourname"/> không hạnh phúc, <get name = "yourname"/> chọn ở lại hay rời đi?</li>
+                        
+                           
+                 </random>
+            </template>
+        </category>
+
+</aiml>

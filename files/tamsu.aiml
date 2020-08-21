@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<topic name = "tâm sự"/>
+	<category>
+	    <pattern>* đang chán quá</pattern>
+	    <template>hãy nói miri nghe nào</template>
+    </category>
+	
+</aiml>
